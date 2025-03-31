@@ -1,6 +1,9 @@
 import type {Metadata} from "next";
 import "./globals.css";
+import {Inter} from "next/font/google";
+import {twMerge} from "tailwind-merge";
 
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Rahul B Nair | AI & Software Engineer",
@@ -61,7 +64,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-        <body className={``}>
+        <body className={twMerge(inter.className, "antialiased")}>
         {children}
         </body>
         </html>

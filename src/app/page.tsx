@@ -1,8 +1,9 @@
+import Navbar from "@/sections/Navbar";
+
 export default function Home() {
     return (
-
-        <div>
-            <h1>Home Page</h1>
-        </div>
+        <main>
+            <Navbar/>
+        </main>
     );
 }
