@@ -2,33 +2,7 @@
 
 
 @theme {
-    --animate-waving-hand: waving-hand 2.5s infinite 70% 70% inline-block;
-    @keyframes waving-hand {
-        0% {
-            transform: rotate(0deg);
-        }
-        15% {
-            transform: rotate(14deg);
-        }
-        30% {
-            transform: rotate(-8deg);
-        }
-        40% {
-            transform: rotate(14deg);
-        }
-        50% {
-            transform: rotate(-4deg);
-        }
-        60% {
-            transform: rotate(10deg);
-        }
-        70% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(0deg);
-        }
-    }
+
 }
 
 @layer base {
@@ -40,7 +14,8 @@
 }
 
 @layer components {
-    /* button component */
+
+    /* button components */
     .btn {
         @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black/30 transition-all active:scale-95 text-white mx-auto;
     }
@@ -70,7 +45,7 @@
     }
 
     .nav-sidebar {
-        @apply absolute left-0 right-0 bg-black/20 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+        @apply absolute left-0 right-0 bg-black/10 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
     }
 
     .head-text {
@@ -79,7 +54,7 @@
 
     /* hero section */
     .hero_tag {
-        @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl   font-black !leading-normal;
+        @apply text-center xl:text-5xl md:text-4xl sm:text-3xl text-2xl  font-black !leading-normal;
     }
 
     /* about section */
@@ -180,4 +155,8 @@
 
 @utility text-gray-gradient {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+}
+
+@utility container {
+    @apply mx-auto  mt-5 px-2 overflow-hidden ;
 }

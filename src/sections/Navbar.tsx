@@ -39,7 +39,7 @@ export default function Navbar() {
     }
 
     return (
-        <header className={"fixed top-0 text-white left-0 right-0 z-50 bg-black/90"}>
+        <header className={" fixed top-0 text-white left-0 right-0 z-50 bg-black/90"}>
             <div className={"mx-auto max-w-7xl"}>
                 <div className={"flex justify-between items-center py-5 mx-auto c-space"}>
                     <Link href={"/"}
@@ -58,7 +58,6 @@ export default function Navbar() {
                         <NavItems/>
                     </nav>
                     {/*NAVIGATION ITEMS - END*/}
-
 
                 </div>
             </div>

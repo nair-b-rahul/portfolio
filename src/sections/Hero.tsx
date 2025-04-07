@@ -1,0 +1,43 @@
+'use client';
+
+import React from 'react';
+import {Canvas} from "@react-three/fiber";
+import {PerspectiveCamera} from "@react-three/drei";
+import HackerRoom from "@/components/HackerRoom";
+import {useMediaQuery} from "react-responsive";
+import Image from "next/image";
+import signature from "@/assets/signature.png";
+
+export default function Hero() {
+
+
+    const isMobile = useMediaQuery({maxWidth: 425});
+
+
+    return (
+        <section className={"container mt-25 md:mt-10 min-h-screen w-full flex flex-col relative"}>
+            <div className={"w-full mx-auto flex flex-col sm:mt-20 c-space gap-3"}>
+                <p className={"sm:text-3xl text-xl font-medium text-center text-white "}> Hi, I&apos;m Rahul </p>
+                <p className={"hero_tag text-gray-gradient"}>Building Products and Brands</p>
+            </div>
+            {/* LANDING 3D MODEL*/}
+            <div className={"w-full h-full absolute mt-20 md:mt-40 "}>
+
+                <Canvas className={"w-full h-full "}>
+                    <PerspectiveCamera makeDefault={true} position={[0, 0, 30]}/>
+                    <HackerRoom
+                        position={[0.6, 0.00, -1.4]}
+                        rotation={[0.4, -3.14, 0.00]}
+                        scale={isMobile ? [0.08, 0.08, 0.08] : [0.1, 0.1, 0.1]}/>
+                    <ambientLight intensity={1}/>
+                    <directionalLight position={[10, 10, 10]}/>
+                </Canvas>
+            </div>
+            <div className={" absolute bottom-40 right-10"}>
+                <Image src={signature} alt={"Founder Signature"} className={"h-20 w-20 object-contain"}/>
+            </div>
+
+
+        </section>
+    );
+}
