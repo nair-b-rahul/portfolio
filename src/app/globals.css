@@ -1,2 +1,18 @@
 @import "tailwindcss";
 
+@theme{
+
+    /** M- PHONE*/
+    --breakpoint-sm: 375px;
+    /** TABLET */
+    --breakpoint-md: 768px;
+    /** LAPTOP */
+    --breakpoint-lg: 1024px;
+    /** L- LAPTOP */
+    --breakpoint-xl: 1200px;
+    /** DESKTOP*/
+    --breakpoint-2xl: 1540px;
+
+
+}
+
